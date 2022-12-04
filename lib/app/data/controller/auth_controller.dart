@@ -60,7 +60,7 @@ if (!cekUsers.exists) {
     'createdAt': _userCredential!.user!.metadata.creationTime.toString(),
     'lastLoginAt':
     _userCredential!.user!.metadata.lastSignInTime.toString(),
-   // 'list_cari': [N,NI,NIC,NICO]
+   // 'list_cari': [A,AZ,AZI,AZIS]
   }).then((value) async {
     String temp = '';
     try {

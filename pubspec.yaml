@@ -9,9 +9,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: 4.6.5
   ionicons: 0.2.1
-  unicons: any
-  ant_icons: ^1.0.0
-  iconsax: ^0.0.8
   firebase_core: 2.3.0
   firebase_auth: 4.1.4
   google_sign_in: 5.4.2
@@ -29,4 +26,3 @@ flutter:
     - assets/images/
     - assets/icons/
   uses-material-design: true
-

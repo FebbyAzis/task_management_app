@@ -1,5 +1,4 @@
 //vidio 7-9
-//import 'dart:html';
 
 import 'package:flutter/material.dart';
 
@@ -61,18 +60,18 @@ class HomeView extends GetView<HomeController> {
                                       color: AppColors.primaryText),
                                 ),
                                 Text(
-                                  'Manage Task Made Easy With Friends',
+                                  'Manage Task Made Easy',
                                   style: TextStyle(
-                                      fontSize: 14,
+                                      fontSize: 12,
                                       color: AppColors.primaryText),
                                 ),
                               ],
                             ),
                             const Spacer(),
                             const Icon(Icons.notifications,
-                                color: AppColors.primaryText, size: 30),
+                                color: AppColors.primaryText, size: 25),
                             const SizedBox(
-                              width: 15,
+                              width: 10,
                             ),
                             ClipRRect(
                               borderRadius: BorderRadius.circular(30),
@@ -106,7 +105,7 @@ class HomeView extends GetView<HomeController> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: Get.height * 0.4,
+                            height: 280,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children:  const [

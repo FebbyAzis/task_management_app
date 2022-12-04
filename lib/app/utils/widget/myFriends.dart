@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_management_app/app/routes/app_pages.dart';
@@ -66,7 +67,7 @@ class MyFriends extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Nico Firmansyah',
+                            'Febby Azis',
                             style: TextStyle(color: AppColors.primaryText),
                           )
                         ],

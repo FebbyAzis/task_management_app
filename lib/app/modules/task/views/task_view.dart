@@ -1,4 +1,3 @@
-//import 'dart:html';
 
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,7 @@ class TaskView extends GetView<TaskController> {
       key: _drawerKey,
       drawer: const SizedBox(width: 150, child: SideBar()),
       backgroundColor: AppColors.primaryBg,
-      body: SafeArea(
+      body:SafeArea(
         child: Row(
         children: [
           !context.isPhone
@@ -53,14 +52,14 @@ class TaskView extends GetView<TaskController> {
               style: TextStyle(fontSize: 20, color: AppColors.primaryText),
               ),
             Text(
-              'Manage Task Made Easy With Friends',
-               style: TextStyle(fontSize: 14, color: AppColors.primaryText),
+              'Manage Task Made Easy',
+               style: TextStyle(fontSize: 12, color: AppColors.primaryText),
               ),
           ],
           ),
           const Spacer(),
           const Icon(Icons.notifications, 
-          color: AppColors.primaryText, size: 30
+          color: AppColors.primaryText, size: 25
           ),
           const SizedBox(
             width: 15,
@@ -205,10 +204,11 @@ class TaskView extends GetView<TaskController> {
                 Container(
                   margin: context.isPhone
                       ? EdgeInsets.zero
-                      : EdgeInsets.only(left: 150, right: 150),
+                      : const EdgeInsets.only(left: 150, right: 150),
                   height: Get.height,
+                  // ignore: prefer_const_constructors
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(20),
                           topRight: Radius.circular(20)),
                       color: Colors.white),

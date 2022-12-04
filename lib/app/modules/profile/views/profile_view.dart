@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:task_management_app/app/data/controller/auth_controller.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
 import 'package:task_management_app/app/utils/widget/header.dart';
 import 'package:task_management_app/app/utils/widget/myTask.dart';
 import 'package:task_management_app/app/utils/widget/profileW.dart';
 import 'package:task_management_app/app/utils/widget/sideBar.dart';
 
-import '../../../data/controller/auth_controller.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/profile_controller.dart';
 
@@ -59,12 +59,12 @@ class ProfileView extends GetView<ProfileController> {
                                 Text(
                                   'Task Management',
                                   style: TextStyle(
-                                      fontSize: 30, color: AppColors.primaryText),
+                                      fontSize: 20, color: AppColors.primaryText),
                                 ),
                                 Text(
-                                  'Manage Task Made Easy With Friends',
+                                  'Manage Task Made Easy',
                                   style: TextStyle(
-                                      fontSize: 14, color: AppColors.primaryText),
+                                      fontSize: 12, color: AppColors.primaryText),
                                 ),
                               ],
                             ),
@@ -91,15 +91,15 @@ class ProfileView extends GetView<ProfileController> {
                                     'Sign Out',
                                     style: TextStyle(
                                         color: AppColors.primaryText,
-                                        fontSize: 16),
+                                        fontSize: 14),
                                   ),
                                   SizedBox(
-                                    width: 5,
+                                    width: 1,
                                   ),
                                   Icon(
                                     Icons.logout_outlined,
                                     color: AppColors.primaryText,
-                                    size: 30,
+                                    size: 25,
                                   ),
                                 ],
                               ),
