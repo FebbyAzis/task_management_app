@@ -13,6 +13,7 @@ import '../controllers/friends_controller.dart';
 class FriendsView extends GetView<FriendsController> {
   final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
   final authCon = Get.find<AuthController>();
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

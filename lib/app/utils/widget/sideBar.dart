@@ -28,7 +28,7 @@ class SideBar extends StatelessWidget {
       width: double.infinity,
       alignment: Alignment.topCenter ,
       child: const Image(
-        image: AssetImage('assets/icons/mahkota.png'),
+        image: AssetImage('assets/images/mahkota.png'),
       ),
       ),
       const SizedBox(
