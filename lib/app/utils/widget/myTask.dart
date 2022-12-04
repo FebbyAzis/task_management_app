@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
 
@@ -10,7 +9,7 @@ class MyTask extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      height: 185,
       child: ListView(
         clipBehavior: Clip.antiAlias,
         scrollDirection: Axis.horizontal,

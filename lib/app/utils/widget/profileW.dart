@@ -33,14 +33,14 @@ class ProfileW extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text(
-              'Nico Firmansyah', 
+              'Febby Azis', 
               style: TextStyle(
               color: AppColors.primaryText, 
               fontSize: 40,
               ),
               ),
               Text(
-              'nicofirmansyah057@gmail.com', 
+              'febbyazis02@gmail.com', 
               style: TextStyle(
               color: AppColors.primaryText, 
               fontSize: 16,
@@ -55,7 +55,7 @@ class ProfileW extends StatelessWidget {
         child: Column(
           children: const [
              SizedBox(
-             height: 40,
+             height: 10,
               ),
             ClipRRect(
                     child: CircleAvatar(
@@ -66,17 +66,17 @@ class ProfileW extends StatelessWidget {
                     ),
                     ),
               SizedBox(
-                height: 20,
+                height: 10,
                 ),
         Text(
-          'Nico Firmansyah', 
+          'Febby Azis', 
           style: TextStyle(
           color: AppColors.primaryText, 
           fontSize: 40,
           ),
           ),
           Text(
-          'nicofirmansyah057@gmail.com', 
+          'febbyazis02@gmail.com', 
           style: TextStyle(
           color: AppColors.primaryText, 
           fontSize: 16,
