@@ -8,6 +8,7 @@ import 'package:task_management_app/app/utils/widget/header.dart';
 import 'package:task_management_app/app/utils/widget/myFriends.dart';
 import 'package:task_management_app/app/utils/widget/sideBar.dart';
 
+import '../../../utils/widget/peopleYouMayKnow.dart';
 import '../controllers/friends_controller.dart';
 
 class FriendsView extends GetView<FriendsController> {
@@ -139,69 +140,16 @@ class FriendsView extends GetView<FriendsController> {
                               style: TextStyle(
                                   fontSize: 25, color: AppColors.primaryText),
                             ),
-                            SizedBox(
-                              height: 200,
-                              child: ListView.builder(
-                                scrollDirection: Axis.horizontal,
-                                shrinkWrap: true,
-                                clipBehavior: Clip.antiAlias,
-                                itemCount: 10,
-                                itemBuilder: (context, index) {
-                                  return Padding(
-                                    padding: const EdgeInsets.all(10.0),
-                                    child: Stack(
-                                      children: [
-                                        ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(50),
-                                          child: const Image(
-                                            image: NetworkImage(
-                                                'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80'),
-                                          ),
-                                        ),
-                                        const Positioned(
-                                          bottom: 10,
-                                          left: 55,
-                                          child: Text(
-                                            "Febby Azis",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          bottom: 0,
-                                          right: 0,
-                                          child: SizedBox(
-                                            height: 36,
-                                            width: 36,
-                                            child: ElevatedButton(
-                                              onPressed: () {},
-                                              style: ElevatedButton.styleFrom(
-                                                padding: EdgeInsets.zero,
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(50),
-                                                ),
-                                              ),
-                                              // ignore: prefer_const_constructors
-                                              child: Icon(
-                                                  Icons.add_circle_outline),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  );
-                                },
-                              ),
-                            ),
+                            PeopleYouMayKnow(),
                             const MyFriends(),
                           ])
                           :ListView.builder(
                             padding: const EdgeInsets.all(8),
                             shrinkWrap: true,
                             itemCount: authCon.hasilPencarian.length,
-                            itemBuilder: (context, index) =>ListTile(leading:ClipRRect(
+                            itemBuilder: (context, index) =>ListTile(
+                              onTap: () => authCon.addFriends(authCon.hasilPencarian[index]['email  ']),
+                              leading:ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(50),
                                           child:  Image(
@@ -224,4 +172,5 @@ class FriendsView extends GetView<FriendsController> {
       ),
     );
   }
+
 }

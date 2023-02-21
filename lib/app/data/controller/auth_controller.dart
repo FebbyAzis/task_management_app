@@ -7,6 +7,7 @@ import 'package:task_management_app/app/routes/app_pages.dart';
 
 class AuthController extends GetxController {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
+  FirebaseAuth auth = FirebaseAuth.instance;
   UserCredential? _userCredential;
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   late TextEditingController searchFriendsController;
@@ -43,7 +44,7 @@ class AuthController extends GetxController {
 
 print(googleUser!.email);
   // Once signed in, return the UserCredential
-   await FirebaseAuth.instance
+   await auth
   .signInWithCredential(credential)
   .then((value) =>_userCredential = value);
 
@@ -125,4 +126,30 @@ CollectionReference users = firestore.collection('users');
   kataCari.refresh();
   hasilPencarian.refresh();
 }
+void addFriends(String_emailFriends) async { 
+  CollectionReference friends = firestore.collection('friends');
+
+  final cekFriends = await friends.doc(auth.currentUser!.email).get();
+  //cek data ada atau tidak
+  if (cekFriends.data() == null) {
+    await friends.doc(auth.currentUser!.email).set({
+      'emailMe': auth.currentUser!.email,
+      'emailFriends': [String_emailFriends],
+    }).whenComplete(() => Get.snackbar("Friends", "Friends successfully added"));
+  }else{
+    await friends.doc(auth.currentUser!.email).set({
+      'emailFriends': FieldValue.arrayUnion([String_emailFriends]),
+    }, SetOptions(merge: true)).whenComplete(
+      () => Get.snackbar("Friends", "Friends successfully added"));
+  }
+  kataCari.clear();
+  hasilPencarian.clear();
+  searchFriendsController.dispose();
+  Get.back();
+}
+// Future <QuerySnapshot<Map<String,dynamic>>> getPeople()async{
+//   CollectionReference users = firestore.collection('users');
+
+//   return;  
+// }
 }
